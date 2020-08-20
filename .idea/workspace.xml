@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e439c391-5551-471e-8ed0-d8aeafa29e8d" name="Default Changelist" comment="" />
+    <list default="true" id="e439c391-5551-471e-8ed0-d8aeafa29e8d" name="Default Changelist" comment="Base de datos actualizado">
+      <change afterPath="$PROJECT_DIR$/database/bookly.mwb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database_design_V2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,19 +22,26 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1gLQy9sFy71g84CXEMgCCWjIpqh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../xampp/php/phpdbg.exe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -48,7 +60,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597891644692</updated>
-      <workItem from="1597891645922" duration="1544000" />
+      <workItem from="1597891645922" duration="3637000" />
+      <workItem from="1597940490095" duration="179000" />
     </task>
     <servers />
   </component>
@@ -58,7 +71,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Base de datos actualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base de datos actualizado" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="401" y="382" key="#SQL_Dialects" timestamp="1597940580188">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="401" y="382" key="#SQL_Dialects/0.0.1920.1080@0.0.1920.1080" timestamp="1597940580188" />
+    <state x="442" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597940667495">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="442" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1597940667495" />
+    <state x="505" y="97" key="CommitChangelistDialog2" timestamp="1597940549060">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="505" y="97" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1597940549060" />
     <state x="739" y="280" key="FileChooserDialogImpl" timestamp="1597892118493">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -67,5 +96,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="468" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1597892120826" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1597900155716">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1597900155716" />
   </component>
 </project>
