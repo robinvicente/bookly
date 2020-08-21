@@ -1,0 +1,27 @@
+.top-bar{
+    width: available;
+    height: 4.5em;
+    background: cadetblue;
+}
+
+.content{
+
+    background-color: cadetblue;
+}
+
+.central-grid{
+    margin-left: 14.479%;
+    margin-right: 14.479%;
+}
+.presentation{
+    height: 650px;
+    background-image: url("../Images/image.png");
+}
+
+.tex-{
+    width: 750px;
+    height: 120px;
+    text-align: right;
+    color: whitesmoke;
+    font-family: Poppins, Serif;
+}
