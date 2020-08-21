@@ -1,21 +1,35 @@
+
 .top-bar{
     width: available;
-    height: 4.5em;
-    background: cadetblue;
+    height: 80px;
+    background: #ffffff;
+    box-shadow: 1px 1px 2px darkgray;
 }
 
 .content{
 
-    background-color: cadetblue;
 }
+.bookly-home{
+    font-size: 32px;
+}
+nav{
+    font-size: 18px;
+}
+.right{
+    margin-right: 0;
 
+}
+.signup, .signin{
+    color: white;
+    margin-right: 0;
+    text-align: right;
+}
 .central-grid{
     margin-left: 14.479%;
     margin-right: 14.479%;
-}
-.presentation{
-    height: 650px;
-    background-image: url("../Images/image.png");
+    padding-top: initial;
+    height: available;
+    box-sizing: border-box;
 }
 
 .tex-{
@@ -24,4 +38,9 @@
     text-align: right;
     color: whitesmoke;
     font-family: Poppins, Serif;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
 }

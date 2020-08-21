@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e439c391-5551-471e-8ed0-d8aeafa29e8d" name="Default Changelist" comment="Base de datos actualizado">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e439c391-5551-471e-8ed0-d8aeafa29e8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookly-web/Styles/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookly-web/Styles/normalize.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookly-web/Styles/styles-index.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookly-web/Styles/styles-index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookly-web/bookly-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookly-web/bookly-app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookly-web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookly-web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookly-web/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookly-web/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookly-web/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookly-web/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/bookly.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database_design.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +71,7 @@
       <updated>1597891644692</updated>
       <workItem from="1597891645922" duration="3637000" />
       <workItem from="1597940490095" duration="9635000" />
-      <workItem from="1598025924741" duration="2663000" />
+      <workItem from="1598025924741" duration="9019000" />
     </task>
     <task id="LOCAL-00001" summary="Base de datos actualizado">
       <created>1597940734981</created>
@@ -88,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597940734981</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="index html">
+      <created>1598028637880</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598028637880</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -99,7 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base de datos actualizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base de datos actualizado" />
+    <MESSAGE value="index html" />
+    <option name="LAST_COMMIT_MESSAGE" value="index html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="401" y="382" key="#SQL_Dialects" timestamp="1597940580188">
@@ -110,10 +110,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="442" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1597940667495" />
-    <state x="505" y="97" key="CommitChangelistDialog2" timestamp="1597943372740">
+    <state x="505" y="97" key="CommitChangelistDialog2" timestamp="1598028636949">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="505" y="97" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1597943372740" />
+    <state x="505" y="97" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598028636949" />
     <state x="739" y="280" key="FileChooserDialogImpl" timestamp="1597892118493">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -122,10 +122,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="468" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1597942792209" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1597940766039">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1598028652544">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1597940766039" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598028652544" />
     <state x="772" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597940745569">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
