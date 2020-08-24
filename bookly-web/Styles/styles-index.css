@@ -39,9 +39,10 @@
     position: relative;
 }
 
-h1{
+h1, h2{
     margin: 0;
     padding: 0;
+
 }
 
 .central-grid-left{
@@ -63,7 +64,7 @@ ul, li, a{
     margin: 0;
     padding: 0;
     color: #111F4D;;
-    font-family: Poppins, Serif;;
+    font-family: Poppins,sans-serif;;
 }
 .central-grid-left li a{
     text-decoration: none;
@@ -118,3 +119,34 @@ ul, li, a{
     padding: 5px;
 }
 
+.content{
+    background-image: url("../Images/image.png");
+    background-size: cover;
+    height: 650px;
+}
+
+.presentation{
+    box-sizing: border-box;
+    float: right;
+    height: 220px;
+    width: max-content;
+    margin: 460px 0 0 0;
+    color: whitesmoke;
+
+}
+.tex-{
+    margin: 0;
+    color: whitesmoke;
+    font-weight: lighter;
+}
+.tex->h1 {
+    font-family: Poppins ,sans-serif;
+    font-weight: lighter;
+    font-size: 38px;
+}
+.tex->h2{
+    margin-top: 20px;
+    font-family: Poppins ,sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+}
