@@ -5,42 +5,116 @@
     background: #ffffff;
     box-shadow: 1px 1px 2px darkgray;
 }
-
-.content{
-
+.home-logo{
+    height: 80px;
 }
 .bookly-home{
-    font-size: 32px;
+    width:border-box;
+    padding-top: 6px;
+    font-size: 26px;
+    color: #111f4d;
+    margin-left: 0;
+    padding-left: 0;
 }
-nav{
-    font-size: 18px;
-}
-.right{
-    margin-right: 0;
 
-}
-.signup, .signin{
-    color: white;
-    margin-right: 0;
-    text-align: right;
-}
 .central-grid{
     margin-left: 14.479%;
     margin-right: 14.479%;
-    padding-top: initial;
     height: available;
     box-sizing: border-box;
+}
+
+.central-grid-contend{
+    margin-left: 14.479%;
+    margin-right: 14.479%;
 }
 
 .tex-{
     width: 750px;
     height: 120px;
     text-align: right;
-    color: whitesmoke;
-    font-family: Poppins, Serif;
+    color: #272343;
+    font-family: Poppins, sans-serif;
+    margin-right: 0;
+    position: relative;
 }
 
 h1{
     margin: 0;
     padding: 0;
 }
+
+.central-grid-left{
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    float: left;
+    color: #102637;
+    width: max-content;
+}
+.central-grid-right{
+    list-style: none;
+    padding: 0;
+    float: right;
+    display: block;
+}
+ul, li, a{
+    margin: 0;
+    padding: 0;
+    color: #111F4D;;
+    font-family: Poppins, Serif;;
+}
+.central-grid-left li a{
+    text-decoration: none;
+    display: block;
+}
+
+.central-grid-left li{
+    display: inline-block;
+    text-align: center;
+}
+.central-grid-right li a{
+    text-decoration: none;
+    color: #111F4D;
+    display: block;
+}
+
+.central-grid-right li{
+    display: inline-block;
+    text-align: center;
+}
+.menu-option{
+    float: left;
+}
+
+.box-signup{
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 75px;
+    height: 30px;
+    background: #111F4D;
+    border-radius: 5px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px;
+}
+
+.box-signin{
+    box-sizing: border-box;
+    margin-top: 25px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+.about, .specs, .why{
+    box-sizing: border-box;
+    margin: 25px auto 25px auto;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
