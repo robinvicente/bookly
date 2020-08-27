@@ -10,7 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-
         <article class="content">
             <div class="principal-center">
                 <div class="box">
