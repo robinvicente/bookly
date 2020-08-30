@@ -5,7 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/normalize.css">
     <link rel="stylesheet" href="Styles/login.css">
+
     <title>Login | Bookly </title>
 </head>
 <body>
@@ -19,11 +22,11 @@
             </form>
         </div>
     </article>
-
 </body>
 </html>
 
 <?php
+
     require_once 'dbconnection.php';
 
     $state = false;
@@ -40,7 +43,7 @@
             $state = false;
         return $state;
     }
-    /*function mailValidation()
+    function mailValidation()
     {
         if ((filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) == true)
         {
@@ -50,7 +53,7 @@
             $stateMail = false;
         }
         return $stateMail;
-    }*/
+    }
     function mysql_fix_string($connectionDatabase, $string)
     {
         if (get_magic_quotes_gpc())
@@ -58,33 +61,29 @@
         return $connectionDatabase->real_escape_string($string);
     }
 
-    if (emptyValues())
+    if (emptyValues() && mailValidation())
     {
-        $email = mysql_fix_string($connectionDatabase, $_POST['email']);
-        $passwd = mysql_fix_string($connectionDatabase, $_POST['passwd']);
+        $email = mysql_fix_string($mysqliConnect, $_POST['email']);
+        $passwd = mysql_fix_string($mysqliConnect, $_POST['passwd']);
 
         $query   = "SELECT * FROM usuario WHERE EmailUsuario = '$email'";
-        $result  = $connectionDatabase->query($query);
+        $result  = $mysqliConnect->query($query);
 
         if (!$result) die ("Usurio no encontrado");
         elseif ($result->num_rows)
         {
             $row = $result->fetch_array(MYSQLI_NUM);
-            if($passwd === $row[3])
-                echo "iguales";
+
             if (password_verify($passwd, $row[3]))
             {
                 session_start();
                 $_SESSION['NombreUsuario']=$row[1];
-                echo htmlspecialchars("$row[0]:
-                            has ingresado como '$row[0]'");
-                die ("<p><a href='diario.php'>Click para continuar
-                                </a></p>");
+                echo htmlspecialchars("$row[2]: has ingresado como '$row[1]'");
+                die ("<p><a href='diario.php'>Click para continuar</a></p>");
             }
             else
-                echo "lol";
+                echo "Contraseña incorrecta";
         }
-        else die("Usuario/password incorrecto");
+        else die("Este email no fue encontrado");
     }
-
 ?>

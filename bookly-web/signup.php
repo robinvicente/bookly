@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -36,11 +36,15 @@
 </body>
 </html>
 <?php
-    include_once "dbconnection.php";
 
+    require_once ('dbconnection.php');
     $state = false;
     $stateMail = false;
     $stateUserName = false;
+    $StateOfExistenceOfUserName = false;
+    $StateOfExistenceOfEmail = false;
+    $StatusOfIdenticalPasswords = false;
+    $StateOfExistenceOfUserName = false;
 
     function emptyValues()
     {
@@ -53,7 +57,6 @@
             $state = false;
         return $state;
     }
-
     function mailValidation()
     {
         if ((filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) == true)
@@ -75,33 +78,87 @@
         return $stateuserName;
     }
     if(emptyValues() && mailValidation() && userNameValidation()) {
-        if ($_POST['pass'] === $_POST['repass']) {
-            $UserName = $_POST['user'];
-            $UserMail = $_POST['email'];
-            $UserPasswd = password_hash($_POST["pass"], PASSWORD_DEFAULT);
-            $UserBirthday = $_POST['birthday'];
+        function VerificationOfIdenticalPasswords()
+        {
+            if ($_POST['pass'] === $_POST['repass'])
+                $StatusOfIdenticalPasswords = true;
+            else
+                $StatusOfIdenticalPasswords = false;
+            return $StatusOfIdenticalPasswords;
+        }
+    }
 
-            $query = "INSERT INTO usuario (NombreUsuario, EmailUsuario, ContraseniaUsuario , FechaNacUsuario) 
-                  VALUES('$UserName', '$UserMail', '$UserPasswd', '$UserBirthday')";
-            $result = $connectionDatabase->query($query);
+    if(emptyValues() && mailValidation() && userNameValidation() && VerificationOfIdenticalPasswords()) {
+        function ExistenceOfUserName()
+        {
+            global $mysqliConnect;
+            global $StateOfExistenceOfUserName;
+            $Clean_UserExistenceOfUserName = mysqli_real_escape_string($mysqliConnect , $_POST['user']);
 
-            if ($connectionDatabase->query($query) === TRUE) {
-                echo "<p>Registro exitoso</p>";
-            } elseif(!$result) {
-                echo "Error: " . $query . "<br>" . $connectionDatabase->error;
+            $queryExistenceOfUserName = "SELECT * FROM usuario WHERE NombreUsuario = '$Clean_UserExistenceOfUserName'";
+
+            if ($resultExistenceOfUserName = mysqli_query($mysqliConnect, $queryExistenceOfUserName)) {
+                $number_of_rowsUser = mysqli_num_rows($resultExistenceOfUserName);
+                if($number_of_rowsUser >= 1)
+                    $StateOfExistenceOfUserName = false;
+                else
+                    $StateOfExistenceOfUserName = true;
+            } else{
+                printf("Could not insert record: %s\n", mysqli_error($mysqliConnect));
             }
-            $connectionDatabase->close();
+            return $StateOfExistenceOfUserName;
+        }
+    }
 
-        }else
-            print '<p>Las contraseñas no coinciden, intentalo de nuevo</p>';
-    }elseif(!emptyValues())
+    if(emptyValues() && mailValidation() && userNameValidation() && VerificationOfIdenticalPasswords()) {
+        function ExistenceOfUserEmail()
+        {
+            global $mysqliConnect;
+            global $StateOfExistenceOfUserEmail;
+            $Clean_EmailExistenceOfUserEmail = mysqli_real_escape_string($mysqliConnect , $_POST['email']);
+
+            $queryExistenceOfUserEmail = "SELECT * FROM usuario WHERE EmailUsuario = '$Clean_EmailExistenceOfUserEmail'";
+
+            if ($resultExistenceOfUserEmail  = mysqli_query($mysqliConnect, $queryExistenceOfUserEmail)) {
+                $number_of_rowsEmail = mysqli_num_rows($resultExistenceOfUserEmail);
+                if($number_of_rowsEmail >= 1)
+                    $StateOfExistenceOfUserEmail = false;
+                else
+                    $StateOfExistenceOfUserEmail = true;
+            } else {
+                printf("Could not insert record: %s\n", mysqli_error($mysqliConnect));
+            }
+            return $StateOfExistenceOfUserEmail;
+        }
+    }
+
+    if(emptyValues() && mailValidation() && userNameValidation() && VerificationOfIdenticalPasswords() && ExistenceOfUserName() && ExistenceOfUserEmail())
     {
-        print '<p>Llene todos los campos</p>';
-    }elseif (!mailValidation())
-    {
-        print '<p>Correo electrónico no válido</p>';
-    }elseif (!userNameValidation())
-    {
-        print ('<p>Nombre de usuario no valido</p>');
+        $CleanUserName = mysqli_real_escape_string($mysqliConnect , $_POST['user']);
+        $CleanUserMail = mysqli_real_escape_string($mysqliConnect , $_POST['email']);
+        $CleanUserPasswd = mysqli_real_escape_string($mysqliConnect, password_hash($_POST["pass"], PASSWORD_DEFAULT));
+        $CleanUserBirthday = mysqli_real_escape_string($mysqliConnect , $_POST['birthday']);
+
+        $querySignup = "INSERT INTO usuario (NombreUsuario, EmailUsuario, ContraseniaUsuario , FechaNacUsuario) 
+                  VALUES('$CleanUserName', '$CleanUserMail', '$CleanUserPasswd', '$CleanUserBirthday')";
+
+        if ($resultQuerySignup = mysqli_query($mysqliConnect, $querySignup)) {
+            echo "<p>Registro exitoso</p>";
+        } else{
+            echo "Error: " . $querySignup . "<br>" . $mysqliConnect->error;
+        }
+
+    }elseif (!emptyValues()) {
+        print '<p>Llene todos los campos.</p>';
+    } elseif (!mailValidation()) {
+        print '<p>Correo electrónico no válido.</p>';
+    } elseif (!userNameValidation()) {
+        print ('<p>Nombre de usuario no valido.</p>');
+    } elseif (!VerificationOfIdenticalPasswords()){
+        print ('<p>Las contraseñas no son iguales, intentalo de nuevo.</p>');
+    } elseif(!ExistenceOfUserName()){
+        print ('<p>Este nombre se usuario ya está registrada, prueba con otro.</p>');
+    }elseif(!ExistenceOfUserEmail()){
+        print ('<p>Este email ya está registrada, prueba con otro.</p>');
     }
 ?>
