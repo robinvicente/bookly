@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -30,6 +30,7 @@
                             <input type="submit" value="Registarme">
                         </form>
                     </div>
+                    <h3>¿Ya estás registrado? <a href="login.php">Accede</a></h3>
                 </div>
             </div>
         </article>
@@ -139,7 +140,7 @@
         $CleanUserPasswd = mysqli_real_escape_string($mysqliConnect, password_hash($_POST["pass"], PASSWORD_DEFAULT));
         $CleanUserBirthday = mysqli_real_escape_string($mysqliConnect , $_POST['birthday']);
 
-        $querySignup = "INSERT INTO usuario (NombreUsuario, EmailUsuario, ContraseniaUsuario , FechaNacUsuario) 
+        $querySignup = "INSERT INTO usuario (NombreUsuario, EmailUsuario, ContraseniaUsuario , FechaNacUsuario)
                   VALUES('$CleanUserName', '$CleanUserMail', '$CleanUserPasswd', '$CleanUserBirthday')";
 
         if ($resultQuerySignup = mysqli_query($mysqliConnect, $querySignup)) {

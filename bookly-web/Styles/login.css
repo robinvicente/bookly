@@ -57,3 +57,17 @@ input[type="submit"] {
 h1{
     font-weight: normal;
 }
+h3{
+  text-align: center;
+  font-weight: 400;
+  font-size: medium;
+
+}
+a{
+  color: #111F4D;
+  text-decoration: none;
+  font-weight: normal;
+}
+a:hover{
+  color: #777;
+}

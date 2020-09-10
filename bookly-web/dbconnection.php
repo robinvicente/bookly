@@ -1,6 +1,6 @@
 <?php
 
-    $mysqliConnect = new mysqli("localhost:3307", "root", "KTLi5p7U", "bookly");
+    $mysqliConnect = new mysqli("localhost", "root", "KTLi5p7U", "booklydb");
     /*
     if (mysqli_connect_errno())
     {

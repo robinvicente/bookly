@@ -1,0 +1,34 @@
+
+.top-bar{
+    width: available;
+    height: 80px;
+    background: #ffffff;
+    box-shadow: 1px 1px 2px darkgray;
+}
+.home-logo{
+    height: 80px;
+}
+.bookly-home{
+    width:border-box;
+    padding-top: 6px;
+    font-size: 26px;
+    color: #111f4d;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.central-grid{
+    margin-left: 14.479%;
+    margin-right: 14.479%;
+    height: available;
+    box-sizing: border-box;
+}
+
+.central-grid-contend{
+    margin-left: 14.479%;
+    margin-right: 14.479%;
+}
+
+.box-signup-right{
+  color: #777;
+}

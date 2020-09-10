@@ -66,6 +66,8 @@ ul, li, a{
     color: #111F4D;;
     font-family: Poppins,sans-serif;;
 }
+
+
 .central-grid-left li a{
     text-decoration: none;
     display: block;
@@ -149,4 +151,52 @@ ul, li, a{
     font-family: Poppins ,sans-serif;
     font-weight: lighter;
     font-size: 22px;
+}
+.izquierda{
+    display: inline-block;
+    float: left;
+    position: absolute;
+}
+.derecha{
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-right: 1px;
+}
+.text-text{
+    display: inline-block;
+    text-align: center;
+    width: 400px;
+    height: 420px;
+    padding: 20px;
+    position: relative;
+    font-family: Poppins, sans-serif;
+}
+.box{
+    margin-top: 20px;
+    height: 450px;
+}
+.box-signup>a{
+    color: #dbe2ef;
+}
+.bar-footer{
+    height: 160px;
+    background: #072a3d;
+    width: available;
+    padding-top: 40px;
+}
+.central-words{
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+.menu{
+    list-style: none;
+
+}
+.menu>li{
+    color: white;
+    font-weight: lighter;
+    font-size: 16px;
 }

@@ -21,6 +21,7 @@
                 <input type="submit" placeholder="Ingresar" value="Submit">
             </form>
         </div>
+        <h3>¿No estás registrado? <a href="signup.php">Registrate</a></h3>
     </article>
 </body>
 </html>
